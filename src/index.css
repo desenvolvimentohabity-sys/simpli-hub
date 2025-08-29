@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cores principais do ERP */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 13%;
+
+    /* Cores customizadas do sistema */
+    --primary: 201 67% 75%; /* #9BCEEB */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 201 67% 85%;
+    --primary-dark: 201 67% 65%;
+    
+    --secondary: 11 67% 85%; /* #F7C7B9 */
+    --secondary-foreground: 220 13% 13%;
+    --secondary-light: 11 67% 92%;
+    --secondary-dark: 11 67% 78%;
+
+    /* Cards e Popovers */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 13%;
+    --card-hover: 201 67% 98%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 13%;
+
+    /* Elementos mutados e acentos */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 13% 46%;
+
+    --accent: 201 67% 95%;
+    --accent-foreground: 220 13% 13%;
+
+    /* Estados */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 13% 13%;
+
+    /* Bordas e inputs */
+    --border: 201 30% 91%;
+    --input: 201 30% 91%;
+    --ring: 201 67% 75%;
+
+    --radius: 0.75rem;
+    
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, hsl(201 67% 75%), hsl(201 67% 85%));
+    --gradient-secondary: linear-gradient(135deg, hsl(11 67% 85%), hsl(11 67% 92%));
+    --gradient-mixed: linear-gradient(135deg, hsl(201 67% 75%), hsl(11 67% 85%));
+
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 hsl(201 67% 75% / 0.05);
+    --shadow: 0 4px 6px -1px hsl(201 67% 75% / 0.1);
+    --shadow-md: 0 10px 15px -3px hsl(201 67% 75% / 0.15);
+    --shadow-lg: 0 20px 25px -5px hsl(201 67% 75% / 0.2);
+    
+    /* Animações */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode - Cores principais */
+    --background: 220 13% 8%;
+    --foreground: 0 0% 95%;
+
+    /* Cores customizadas para dark mode */
+    --primary: 201 67% 65%;
+    --primary-foreground: 220 13% 13%;
+    --primary-light: 201 67% 75%;
+    --primary-dark: 201 67% 55%;
+    
+    --secondary: 11 67% 75%;
+    --secondary-foreground: 220 13% 13%;
+    --secondary-light: 11 67% 82%;
+    --secondary-dark: 11 67% 68%;
+
+    /* Cards e Popovers */
+    --card: 220 13% 11%;
+    --card-foreground: 0 0% 95%;
+    --card-hover: 201 30% 15%;
+
+    --popover: 220 13% 11%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Elementos mutados e acentos */
+    --muted: 220 13% 16%;
+    --muted-foreground: 220 13% 65%;
+
+    --accent: 201 30% 20%;
+    --accent-foreground: 0 0% 95%;
+
+    /* Estados */
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 95%;
+    
+    --success: 142 71% 35%;
+    --success-foreground: 0 0% 95%;
+    
+    --warning: 38 92% 45%;
+    --warning-foreground: 0 0% 95%;
+
+    /* Bordas e inputs */
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 201 67% 65%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
